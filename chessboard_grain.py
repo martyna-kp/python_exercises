@@ -1,0 +1,14 @@
+# Calculate the number of grains of wheat on a chessboard.
+
+# A chessboard has 64 squares. Square 1 has one grain, square 2 has two grains, square 3 has four grains, and so on, doubling each time.
+
+# Write code that calculates the number of grains on a given square and the total number of grains on the chessboard
+
+def square(number):
+    if number > 64 or number < 1:
+        raise ValueError("square must be between 1 and 64")
+    return 2 ** (number - 1)
+
+
+def total():
+    return sum(square(number) for number in range (1,65))
